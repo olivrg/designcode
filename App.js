@@ -6,15 +6,17 @@ import Card from "./components/Card";
 import Course from "./components/Course";
 import { NotificationIcon } from "./components/Icons";
 import Logo from "./components/Logo";
+import Menu from "./components/Menu";
 export default class App extends React.Component {
   render() {
     return (
       <Container>
+        <Menu />
         <SafeAreaView>
           <ScrollView style={{ height: "100%" }}>
             <TitleBar>
               <Avatar source={require("./assets/avatar.jpg")} />
-              <Title>Welcome back!</Title>
+              <Title>Welcome back,</Title>
               <Name>Oli</Name>
               <NotificationIcon
                 style={{ position: "absolute", right: 20, top: 5 }}
