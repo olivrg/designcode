@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Animated,
-  Easing,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  TouchableOpacity
-} from "react-native";
+import { Animated, Easing, SafeAreaView, ScrollView, StatusBar, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import Avatar from "../components/Avatar";
@@ -123,7 +116,9 @@ class HomeScreen extends React.Component {
                   <TouchableOpacity
                     key={index}
                     onPress={() => {
-                      this.props.navigation.push("Section");
+                      this.props.navigation.push("Section", {
+                        section: card
+                      });
                     }}
                   >
                     <Card
